@@ -1,0 +1,20 @@
+prometheus:
+  prometheusSpec:    
+    storageSpec: 
+     volumeClaimTemplate:
+       spec:
+         storageClassName: manual
+         accessModes: ["ReadWriteOnce"]
+         resources:
+           requests:
+             storage: 10Gi
+alertmanager:
+  alertmanagerSpec:
+      storage: 
+        volumeClaimTemplate:
+          spec:
+            storageClassName: manual
+            accessModes: ["ReadWriteOnce"]
+            resources:
+                requests:
+                  storage: 10Gi
